@@ -1,3 +1,6 @@
+#coding: utf-8
+
+#调色板
 import cv2
 import numpy as np 
 

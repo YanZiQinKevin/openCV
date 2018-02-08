@@ -8,7 +8,9 @@ Example: Tracking the Blue pen
 
 ![TrackingColor](https://github.com/YanZiQinKevin/openCV/blob/master/image/screenshoot.png)
 
-Make Haar Cascade
+
+
+# Make Haar Cascade
 1 Collect "Negative" or "background" image
 
 2 collect or create "positive" images

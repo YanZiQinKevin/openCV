@@ -7,7 +7,6 @@ Lucy-Richardson deconvolution is an iterative algorithm for recovering an image 
 https://en.wikipedia.org/wiki/Richardson%E2%80%93Lucy_deconvolution
 
 作用：把模糊画面还原， 在移动设备中，提高识别成功率：
-
 opencv_4.py
 deconvolution.ipynb
 

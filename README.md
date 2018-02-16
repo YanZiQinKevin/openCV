@@ -1,8 +1,15 @@
-# openCV
+## openCV
 
 OpenCV learning code by Python
+## Deconvolution:
+把模糊画面还原， 在移动设备中，提高识别成功率
+opencv_4.py
+deconvolution.ipynb
 
-1，color recognition
+![image](https://github.com/YanZiQinKevin/openCV/blob/master/image/decon_shoot.png)
+
+
+# color recognition
 BGR->HSV
 Example: Tracking the Blue pen
 

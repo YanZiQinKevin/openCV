@@ -2,7 +2,10 @@
 
 OpenCV learning code by Python
 ## Deconvolution:
-把模糊画面还原， 在移动设备中，提高识别成功率
+
+Lucy-Richardson deconvolution is an iterative algorithm for recovering an image which is blurred by a known point spread function (PSF). You can find the iterative algorithm steps in Wikipedia.
+
+作用：把模糊画面还原， 在移动设备中，提高识别成功率
 opencv_4.py
 deconvolution.ipynb
 

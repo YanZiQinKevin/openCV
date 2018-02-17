@@ -6,7 +6,9 @@ import cv2
 
 def blur_edge(img, d=31):
     h, w  = img.shape[:2]
+    #create a border around the image
     img_pad = cv2.copyMakeBorder(img, d, d, d, d, cv2.BORDER_WRAP)
+    #基于高斯模糊GaussianBlur
     img_blur = cv2.GaussianBlur(img_pad, (2*d+1, 2*d+1), -1)[d:-d,d:-d]
     y, x = np.indices((h, w))
     dist = np.dstack([x, w-x-1, y, h-y-1]).min(-1)
@@ -44,17 +46,23 @@ if __name__ == '__main__':
     cv2.namedWindow('Input',cv2.WINDOW_NORMAL)
     cv2.resizeWindow('Input', 512,512)
     cv2.imshow('Input', img)
-
+    #blur image 
     img = blur_edge(img)
-    IMG = cv2.dft(img, flags=cv2.DFT_COMPLEX_OUTPUT)
 
+    #Discrete Fourier Transform (DFT) 傅立叶???
+    #Fourier Transform is used to analyze the frequency characteristics of various filters. 
+    #For images, 2D Discrete Fourier Transform (DFT) is used to find the frequency domain.
+    # A fast algorithm called Fast Fourier Transform (FFT) is used for calculation of DFT.
+    IMG = cv2.dft(img, flags=cv2.DFT_COMPLEX_OUTPUT)
+    
+    #def fecous as global 
     defocus = '--circle' in opts
 
     def update(_):
         ang = np.deg2rad( cv2.getTrackbarPos('angle', win) )
         d = cv2.getTrackbarPos('d', win)
         noise = 10**(-0.1*cv2.getTrackbarPos('SNR (db)', win))
-
+        #point spread function
         if defocus:
             psf = defocus_kernel(d)
         else:

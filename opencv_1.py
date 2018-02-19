@@ -24,8 +24,8 @@ def main():
 	cv2.imshow('lne',img)
 
 	#copy image
-	outpath="/Users/yanziqin/openCV/output/4.1.01.tiff"
-	cv2.imwrite(outpath,img)
+	#outpath="/Users/yanziqin/openCV/output/4.1.01.tiff"
+	#cv2.imwrite(outpath,img)
 	cv2.waitKey(0)
 	cv2.destroyAllWindows()
 

@@ -36,7 +36,7 @@ def main():
 		cv2.namedWindow('image_mask',cv2.WINDOW_NORMAL)
 		cv2.resizeWindow('image_mask', 512,512)
 		cv2.imshow('image_mask',image_mask)
-		#print(image_mask)
+		print(image_mask)
 		#org
 		cv2.resizeWindow(windowName, 512,512)
 		cv2.imshow(windowName,frame)

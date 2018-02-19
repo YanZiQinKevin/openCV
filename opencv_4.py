@@ -79,6 +79,8 @@ if __name__ == '__main__':
         iPSF = PSF / (PSF2 + noise)[...,np.newaxis]
         RES = cv2.mulSpectrums(IMG, iPSF, 0)
         res = cv2.idft(RES, flags=cv2.DFT_SCALE | cv2.DFT_REAL_OUTPUT )
+        # // return int
+        # roll Elements that roll beyond the last position are re-introduced at the first.
         res = np.roll(res, -kh//2, 0)
         res = np.roll(res, -kw//2, 1)
         cv2.resizeWindow(win, 512,512)

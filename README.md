@@ -3,7 +3,7 @@
 OpenCV learning code by Python  
 ## QRcode & dBarcode  
 code: Readcode.py  
-  In dBarcode recognition: It is easy to do. I used cv2.getStructuringElement to check out the rectangle as a kernel, and remove another noise. However, the QRcode is another case before I wrong that I thought it easy as dBarcode. The QRcode,we need conform the THREE small rectangle frist. The way is use 5 more times iteration. 
+  In dBarcode recognition: It is easy to do. I used cv2.getStructuringElement to check out the rectangle as a kernel, and remove another noise. However, the QRcode is another case before I wrong that I thought it easy as dBarcode. The QRcode,we need conform the THREE small rectangle frist. The way is 5 more times iteration of hierarchy. 
 ![image](https://github.com/YanZiQinKevin/openCV/blob/master/screenshoot/WX20180308-114126%402x.png)
 
 (2018/3/8,USA)  

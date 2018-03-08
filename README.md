@@ -1,6 +1,14 @@
 ## openCV
 
-OpenCV learning code by Python
+OpenCV learning code by Python  
+## QRcode & dBarcode  
+code: Readcode.py  
+  In dBarcode recognition: It is easy to do. I used cv2.getStructuringElement to check out the rectangle as a kernel, and remove another noise. However, the QRcode is another case before I wrong that I thought it easy as dBarcode. The QRcode,we need conform the THREE small rectangle frist. The way is use 5 more times iteration. 
+![image](https://github.com/YanZiQinKevin/openCV/blob/master/screenshoot/WX20180308-114126%402x.png)
+
+(2018/3/8,USA)  
+Reference: http://dsynflo.blogspot.in/2014/10/opencv-qr-code-detection-and-extraction.htm  
+
 ## Deconvolution:
 
 deconvolution is an iterative algorithm for recovering an image which is blurred by a known point spread function (PSF). You can find the iterative algorithm steps in：https://en.wikipedia.org/wiki/Deconvolution

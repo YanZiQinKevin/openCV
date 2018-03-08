@@ -85,6 +85,7 @@ while True:
   QRcode(gray,image)
 
   #cv2.imshow("Results", image)
+  # Q 键退出 
   if cv2.waitKey(1) & 0xFF == ord('q'):
       break
 

@@ -7,7 +7,8 @@ code: Readcode.py
 ![image](https://github.com/YanZiQinKevin/openCV/blob/master/screenshoot/WX20180308-114126%402x.png)
 
 (2018/3/8,USA)  
-Reference: http://dsynflo.blogspot.in/2014/10/opencv-qr-code-detection-and-extraction.htm  
+Reference: http://dsynflo.blogspot.in/2014/10/opencv-qr-code-detection-and-extraction.html  
+
 
 ## Deconvolution:
 

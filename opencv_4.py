@@ -34,21 +34,27 @@ def defocus_kernel(d, sz=65):
 if __name__ == '__main__':
     print __doc__
     import sys, getopt
+    #命令行参数
     opts, args = getopt.getopt(sys.argv[1:], '', ['circle', 'angle=', 'd=', 'snr='])
     opts = dict(opts)
     try: fn = args[0]
     except: fn = '/Users/yanziqin/openCV/car.jpg'
 
     win = 'deconvolution'
-
+    #灰度
     img = cv2.imread(fn, 0)
+
+    #归一化
     img = np.float32(img)/255.0
     cv2.namedWindow('Input',cv2.WINDOW_NORMAL)
     cv2.resizeWindow('Input', 512,512)
     cv2.imshow('Input', img)
+    
     #blur image 
+    
     img = blur_edge(img)
-
+    
+    cv2.imshow('Input2', img)
     #Discrete Fourier Transform (DFT) 傅立叶???
     #Fourier Transform is used to analyze the frequency characteristics of various filters. 
     #For images, 2D Discrete Fourier Transform (DFT) is used to find the frequency domain.
@@ -85,6 +91,7 @@ if __name__ == '__main__':
         res = np.roll(res, -kw//2, 1)
         cv2.resizeWindow(win, 512,512)
         cv2.imshow(win, res)
+        
 
     cv2.namedWindow(win,cv2.WINDOW_NORMAL)
     

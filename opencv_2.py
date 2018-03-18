@@ -25,7 +25,21 @@ def main():
 	text = 'Test Test'
 	cv2.putText(img,text,(200,100),cv2.FONT_HERSHEY_SIMPLEX,2,(255,255,0))
 
-	cv2.imshow('lne',img)
+	#cv2.imshow('lne',img)
+	# SIFT
+	imgpath="/Users/yanziqin/openCV/image/4.1.01.tiff"
+	img = cv2.imread(imgpath,cv2.IMREAD_COLOR)
+	gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+	cv2.imshow('orgin',img)
+
+	detector = sift = cv2.xfeatures2d.SIFT_create()
+	keypoints = detector.detect(gray, None)
+	#img = cv2.drawKeypoints(gray,keypoints,flags = cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)  
+	print(len(keypoints))
+	for k in keypoints:
+		cv2.circle(img,(int(k.pt[0]),int(k.pt[1])),1,(0,0,255),-1)
+
+	cv2.imshow('test',img)
 	cv2.waitKey(0)
 	cv2.destroyAllWindows()
 

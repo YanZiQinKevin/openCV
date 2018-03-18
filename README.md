@@ -23,6 +23,8 @@ deconvolution.ipynb  
 
 ![image](https://github.com/YanZiQinKevin/openCV/blob/master/image/decon_shoot.png)
 
+# SIFT  
+![image](https://github.com/YanZiQinKevin/openCV/blob/master/screenshoot/2x.png)
 
 # color recognition
 BGR->HSV

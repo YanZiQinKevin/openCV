@@ -16,7 +16,9 @@ def main():
 	#imread: 1为彩色，0为黑白
 	img1 = cv2.imread(imgpath1,0)
 	# 是否模糊
-	imageVar1 = cv2.Laplacian(img1,cv2.CV_64F).var()
+	imageVar1 = cv2.Laplacian(img1,cv2.CV_16S,ksize=3)
+	imageVar1 = cv2.convertScaleAbs(imageVar1)
+	cv2.imshow('lap',imageVar1)
 	print (imageVar1)
 	#Image = set of numbers
 
@@ -33,7 +35,7 @@ def main():
 	print(img.ndim)
 
 	cv2.namedWindow('lne',cv2.WINDOW_AUTOSIZE)
-	cv2.imshow('lne',img)
+	cv2.imshow('lne',img1)
 
 	#copy image
 	#outpath="/Users/yanziqin/openCV/output/4.1.01.tiff"

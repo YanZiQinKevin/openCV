@@ -70,7 +70,7 @@ while True:
 
   #摄像头版本
   #ret, image = cap.read()
-  cv2.imshow("OR", image)
+  #cv2.imshow("OR", image)
 
   gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
